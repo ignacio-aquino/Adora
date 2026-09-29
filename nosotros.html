@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nosotros | ADORA</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/styles.css">
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="ADORA">
+            </a>
+
+        <nav class="nav">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="nosotros.html"
+               class="active">
+                Nosotros
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                class="cart-button"
+                onclick="openCart()">
+
+                🛒
+                <span id="cart-count">0</span>
+
+            </button>
+
+            <button
+                class="menu-button"
+                onclick="toggleMenu()">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <section class="page-hero">
+
+        <p>
+            CONOCENOS
+        </p>
+
+        <h1>
+            Nuestra historia
+        </h1>
+
+        <span>
+            Más que maquillaje, una forma de expresión.
+        </span>
+
+    </section>
+
+
+    <section class="about-page section">
+
+        <div class="about-image">
+
+            <img
+                src="img/hero.jpg"
+                alt="ADORA maquillaje">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                NUESTRA HISTORIA
+            </p>
+
+            <h2>
+                Nació una idea.
+                Nació ADORA.
+            </h2>
+
+            <p>
+                ADORA nació con una idea simple:
+                crear un espacio donde cada persona
+                pueda encontrar productos que representen
+                su estilo.
+            </p>
+
+            <p>
+                Creemos que maquillarse no significa
+                esconder quién sos, sino experimentar
+                y expresar tu personalidad.
+            </p>
+
+            <p>
+                Por eso seleccionamos productos pensados
+                para acompañarte desde tu look cotidiano
+                hasta esos momentos especiales.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="values section">
+
+        <div class="section-title">
+
+            <p>
+                ADORA
+            </p>
+
+            <h2>
+                Lo que nos representa
+            </h2>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <span>
+                    ✨
+                </span>
+
+                <h3>
+                    Autenticidad
+                </h3>
+
+                <p>
+                    Tu estilo no tiene reglas.
+                    Expresalo como quieras.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <span>
+                    💗
+                </span>
+
+                <h3>
+                    Pasión
+                </h3>
+
+                <p>
+                    Creamos ADORA con pasión
+                    por el maquillaje y la belleza.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <span>
+                    🌸
+                </span>
+
+                <h3>
+                    Inspiración
+                </h3>
+
+                <p>
+                    Queremos inspirarte a descubrir
+                    nuevas formas de expresarte.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="quote-section">
+
+        <div>
+
+            <span>
+                “
+            </span>
+
+            <h2>
+                El maquillaje no cambia quién sos.
+                Te ayuda a mostrarlo.
+            </h2>
+
+            <p>
+                — ADORA
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <img src="img/logo-completo.png" alt="ADORA Box de Maquillaje">
+
+            <p>
+                Tu belleza. Tu estilo.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Navegación
+            </h3>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                Seguinos
+            </h3>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ADORA. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- CARRITO -->
+
+<div
+    class="cart-overlay"
+    id="cart-overlay"
+    onclick="closeCart()">
+</div>
+
+<aside
+    class="cart"
+    id="cart">
+
+    <div class="cart-header">
+
+        <h2>
+            Tu carrito
+        </h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div
+        class="cart-items"
+        id="cart-items">
+
+        <p class="empty-cart">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cart-total">
+                $0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-button"
+            onclick="checkout()">
+
+            FINALIZAR COMPRA
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

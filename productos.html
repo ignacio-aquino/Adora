@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | ADORA</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="css/styles.css">
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="ADORA">
+            </a>
+
+        <nav class="nav">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html"
+               class="active">
+                Productos
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="cart-button"
+                    onclick="openCart()">
+
+                🛒
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </button>
+
+            <button class="menu-button"
+                    onclick="toggleMenu()">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <!-- HERO PRODUCTOS -->
+
+    <section class="page-hero">
+
+        <p>
+            ADORA
+        </p>
+
+        <h1>
+            Nuestros productos
+        </h1>
+
+        <span>
+            Encontrá tus nuevos favoritos.
+        </span>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+
+    <section class="products-section section">
+
+
+        <!-- BUSCADOR -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="product-search"
+                placeholder="🔍 Buscar productos..."
+                oninput="searchProducts()">
+
+        </div>
+
+
+        <!-- FILTROS -->
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                onclick="filterProducts('todos', this)">
+
+                Todos
+
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterProducts('labios', this)">
+
+                Labios
+
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterProducts('ojos', this)">
+
+                Ojos
+
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterProducts('rostro', this)">
+
+                Rostro
+
+            </button>
+
+            <button
+                class="filter"
+                onclick="filterProducts('skincare', this)">
+
+                Skincare
+
+            </button>
+
+        </div>
+
+
+        <!-- GRID -->
+
+        <div
+            class="product-grid"
+            id="products-container">
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="labios"
+                data-name="labial velvet">
+
+                <div class="product-image">
+
+                    <span class="product-tag">
+                        BEST SELLER
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(1)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/labial.jpg"
+                        alt="Labial Velvet">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        LABIOS
+                    </p>
+
+                    <h3>
+                        Labial Velvet
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $12.500
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(1)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="labios"
+                data-name="lip gloss crystal">
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(5)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/gloss.jpg"
+                        alt="Lip Gloss Crystal">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        LABIOS
+                    </p>
+
+                    <h3>
+                        Lip Gloss Crystal
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $10.900
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(5)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="rostro"
+                data-name="blush rose">
+
+                <div class="product-image">
+
+                    <span class="product-tag">
+                        NUEVO
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(2)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/rubor.jpg"
+                        alt="Blush Rosé">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        ROSTRO
+                    </p>
+
+                    <h3>
+                        Blush Rosé
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $13.500
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(2)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="rostro"
+                data-name="base perfect skin">
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(6)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/base.jpg"
+                        alt="Base Perfect Skin">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        ROSTRO
+                    </p>
+
+                    <h3>
+                        Base Perfect Skin
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $21.500
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(6)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="ojos"
+                data-name="mascara volume">
+
+                <div class="product-image">
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(3)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/mascara.jpg"
+                        alt="Máscara Volume">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        OJOS
+                    </p>
+
+                    <h3>
+                        Máscara Volume
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $15.900
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(3)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO -->
+
+            <article
+                class="product-card"
+                data-category="ojos"
+                data-name="paleta nude">
+
+                <div class="product-image">
+
+                    <span class="product-tag">
+                        -20%
+                    </span>
+
+                    <button
+                        class="favorite"
+                        onclick="toggleFavorite(4)">
+
+                        ♡
+
+                    </button>
+
+                    <img
+                        src="img/paleta.jpg"
+                        alt="Paleta Nude">
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        OJOS
+                    </p>
+
+                    <h3>
+                        Paleta Nude
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="product-price">
+                        $24.900
+                    </p>
+
+                    <button
+                        class="add-cart"
+                        onclick="addToCart(4)">
+
+                        AGREGAR AL CARRITO
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <p
+            id="no-products"
+            class="no-products">
+
+            No encontramos productos.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <img src="img/logo-completo.png" alt="ADORA Box de Maquillaje">
+
+            <p>
+                Tu belleza. Tu estilo.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                Navegación
+            </h3>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="productos.html">
+                Productos
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+                Seguinos
+            </h3>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
+            <a href="#">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ADORA. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- CARRITO -->
+
+<div
+    class="cart-overlay"
+    id="cart-overlay"
+    onclick="closeCart()">
+</div>
+
+<aside
+    class="cart"
+    id="cart">
+
+    <div class="cart-header">
+
+        <h2>
+            Tu carrito
+        </h2>
+
+        <button onclick="closeCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <div
+        class="cart-items"
+        id="cart-items">
+
+        <p class="empty-cart">
+            Tu carrito está vacío.
+        </p>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cart-total">
+                $0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-button"
+            onclick="checkout()">
+
+            FINALIZAR COMPRA
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

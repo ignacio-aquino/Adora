@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ADORA | Maquillaje</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <meta name="description" content="ADORA - Tienda online de maquillaje">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="ADORA">
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="search-button" onclick="focusSearch()">
+                    🔍
+                </button>
+
+                <button class="cart-button" onclick="openCart()">
+                    🛒
+                    <span id="cart-count">0</span>
+                </button>
+
+                <button class="menu-button" onclick="toggleMenu()">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    BIENVENIDA A ADORA
+                </p>
+
+                <h1>
+                    Tu belleza.<br>
+                    Tu estilo.
+                </h1>
+
+                <p>
+                    Descubrí productos de maquillaje pensados
+                    para expresar tu personalidad.
+                </p>
+
+                <a href="productos.html" class="btn btn-primary">
+                    VER PRODUCTOS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORÍAS ================= -->
+
+        <section class="categories section">
+
+            <div class="section-title">
+
+                <p>DESCUBRÍ</p>
+
+                <h2>
+                    Nuestras categorías
+                </h2>
+
+            </div>
+
+            <div class="category-grid">
+
+                <a href="productos.html?categoria=labios"
+                   class="category-card category-lips">
+
+                    <div>
+                        <span>💋</span>
+                        <h3>Labios</h3>
+                        <p>Labiales, gloss y más</p>
+                    </div>
+
+                </a>
+
+
+                <a href="productos.html?categoria=ojos"
+                   class="category-card category-eyes">
+
+                    <div>
+                        <span>👁️</span>
+                        <h3>Ojos</h3>
+                        <p>Sombras y máscaras</p>
+                    </div>
+
+                </a>
+
+
+                <a href="productos.html?categoria=rostro"
+                   class="category-card category-face">
+
+                    <div>
+                        <span>✨</span>
+                        <h3>Rostro</h3>
+                        <p>Bases, rubores y más</p>
+                    </div>
+
+                </a>
+
+
+                <a href="productos.html?categoria=skincare"
+                   class="category-card category-skin">
+
+                    <div>
+                        <span>🧴</span>
+                        <h3>Skincare</h3>
+                        <p>Cuidado de la piel</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTOS DESTACADOS ================= -->
+
+        <section class="featured section">
+
+            <div class="section-title">
+
+                <p>ADORA</p>
+
+                <h2>
+                    Productos destacados
+                </h2>
+
+                <span>
+                    Nuestros favoritos para vos
+                </span>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            BEST SELLER
+                        </span>
+
+                        <button
+                            class="favorite"
+                            onclick="toggleFavorite(1)">
+                            ♡
+                        </button>
+
+                        <img
+                            src="img/labial.jpg"
+                            alt="Labial Velvet ADORA">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            LABIOS
+                        </p>
+
+                        <h3>
+                            Labial Velvet
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="product-price">
+                            $12.500
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(1)">
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            NUEVO
+                        </span>
+
+                        <button
+                            class="favorite"
+                            onclick="toggleFavorite(2)">
+                            ♡
+                        </button>
+
+                        <img
+                            src="img/rubor.jpg"
+                            alt="Rubor Blush ADORA">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            ROSTRO
+                        </p>
+
+                        <h3>
+                            Blush Rosé
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="product-price">
+                            $13.500
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(2)">
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <button
+                            class="favorite"
+                            onclick="toggleFavorite(3)">
+                            ♡
+                        </button>
+
+                        <img
+                            src="img/mascara.jpg"
+                            alt="Máscara de pestañas ADORA">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            OJOS
+                        </p>
+
+                        <h3>
+                            Máscara Volume
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="product-price">
+                            $15.900
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(3)">
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <span class="product-tag">
+                            -20%
+                        </span>
+
+                        <button
+                            class="favorite"
+                            onclick="toggleFavorite(4)">
+                            ♡
+                        </button>
+
+                        <img
+                            src="img/paleta.jpg"
+                            alt="Paleta de sombras ADORA">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            OJOS
+                        </p>
+
+                        <h3>
+                            Paleta Nude
+                        </h3>
+
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p class="product-price">
+                            $24.900
+                        </p>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(4)">
+                            AGREGAR AL CARRITO
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="center-button">
+
+                <a href="productos.html"
+                   class="btn btn-outline">
+
+                    VER TODOS LOS PRODUCTOS
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OFERTA ================= -->
+
+        <section class="promo">
+
+            <div class="promo-content">
+
+                <p>
+                    OFERTA ESPECIAL
+                </p>
+
+                <h2>
+                    Tu beauty moment
+                </h2>
+
+                <span>
+                    Hasta 30% OFF en productos seleccionados.
+                </span>
+
+                <a href="productos.html"
+                   class="btn btn-light">
+
+                    VER OFERTAS
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SOBRE ADORA ================= -->
+
+        <section class="about-preview section">
+
+            <div class="about-image">
+
+                <img
+                    src="img/hero.jpg"
+                    alt="Productos de maquillaje ADORA">
+
+            </div>
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    CONOCÉ ADORA
+                </p>
+
+                <h2>
+                    Maquillaje para
+                    expresar quién sos.
+                </h2>
+
+                <p>
+                    En ADORA creemos que el maquillaje es una
+                    forma de expresión. Por eso buscamos crear
+                    una colección que te permita experimentar,
+                    descubrir y encontrar tu propio estilo.
+                </p>
+
+                <a href="nosotros.html"
+                   class="btn btn-primary">
+
+                    CONOCÉ NUESTRA HISTORIA
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter">
+
+            <div>
+
+                <p>
+                    FORMÁ PARTE DE ADORA
+                </p>
+
+                <h2>
+                    Recibí nuestras novedades
+                </h2>
+
+                <span>
+                    Lanzamientos, ofertas y consejos de maquillaje.
+                </span>
+
+            </div>
+
+            <form id="newsletter-form">
+
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="Tu email"
+                    required>
+
+                <button type="submit">
+                    SUSCRIBIRME
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img src="img/logo-completo.png" alt="ADORA Box de Maquillaje">
+
+                <p>
+                    Tu belleza. Tu estilo.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Ayuda
+                </h3>
+
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Envíos</a>
+                <a href="#">Medios de pago</a>
+                <a href="#">Cambios y devoluciones</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Seguinos
+                </h3>
+
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">WhatsApp</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ADORA. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CARRITO ================= -->
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        onclick="closeCart()">
+    </div>
+
+
+    <aside class="cart" id="cart">
+
+        <div class="cart-header">
+
+            <h2>
+                Tu carrito
+            </h2>
+
+            <button onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cart-items">
+
+            <p class="empty-cart">
+                Tu carrito está vacío.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cart-total">
+                    $0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                onclick="checkout()">
+
+                FINALIZAR COMPRA
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- JS -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
